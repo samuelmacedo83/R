@@ -19,3 +19,10 @@ dir("./my_files/", full.names = TRUE) %>%
 
 # OBS: a mesma linha de raciocínio se aplica a arquivos Excel. Apenas tem que carregar
 # a library (readxl) e no lucar do "read.csv", substituir pelo "read_xlsx".
+
+
+
+# Outra maneira de realizar esta tarefa
+purrr::map_df(.x = dir(path = ., pattern = ".xlsx", full.names = TRUE),
+              .f = readxl::read_xlsx) %>% 
+  writexl::write_xlsx(x = ., path = "my_file.xlsx")

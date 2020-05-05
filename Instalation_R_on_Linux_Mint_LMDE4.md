@@ -13,7 +13,6 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv E19F5F87128899
 
 ```
 sudo echo "deb http://cloud.r-project.org/bin/linux/debian buster-cran40/" | sudo tee -a /etc/apt/sources.list
-
 sudo apt update
 
 ```
@@ -40,3 +39,6 @@ sudo apt install libcurl4-openssl-dev libxml2-dev libssl-dev
 sudo apt install libgit2-dev libssh2-1-dev
 
 ```
+
+
+Estas informações estão disponíveis [aqui](https://cran.r-project.org/bin/linux/debian/#debian-bullseye-testing)

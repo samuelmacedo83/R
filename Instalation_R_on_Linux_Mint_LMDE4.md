@@ -41,4 +41,4 @@ sudo apt install libgit2-dev libssh2-1-dev
 ```
 
 
-Estas informações estão disponíveis [aqui](https://cran.r-project.org/bin/linux/debian/#debian-bullseye-testing)
+Estas informações estão disponíveis [aqui](https://cran.r-project.org/bin/linux/debian/#general-information)

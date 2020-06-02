@@ -1,0 +1,435 @@
+city;date;new_confirmed;cum_sum_daily_cases;days_since_first_case
+1;Diadema;2020-03-27;1;1;0
+2;Diadema;2020-03-28;0;1;1
+3;Diadema;2020-03-29;0;1;2
+4;Diadema;2020-03-30;1;2;3
+5;Diadema;2020-03-31;3;5;4
+6;Diadema;2020-04-01;3;8;5
+7;Diadema;2020-04-02;-8;0;6
+8;Diadema;2020-04-03;20;20;7
+9;Diadema;2020-04-04;3;23;8
+10;Diadema;2020-04-05;1;24;9
+11;Diadema;2020-04-06;1;25;10
+12;Diadema;2020-04-07;10;35;11
+13;Diadema;2020-04-08;11;46;12
+14;Diadema;2020-04-09;9;55;13
+15;Diadema;2020-04-10;4;59;14
+16;Diadema;2020-04-11;1;60;15
+17;Diadema;2020-04-12;3;63;16
+18;Diadema;2020-04-13;3;66;17
+19;Diadema;2020-04-14;5;71;18
+20;Diadema;2020-04-15;23;94;19
+21;Diadema;2020-04-16;6;100;20
+22;Diadema;2020-04-17;15;115;21
+23;Diadema;2020-04-18;3;118;22
+24;Diadema;2020-04-19;2;120;23
+25;Diadema;2020-04-20;6;126;24
+26;Diadema;2020-04-21;9;135;25
+27;Diadema;2020-04-22;3;138;26
+28;Diadema;2020-04-23;13;151;27
+29;Diadema;2020-04-24;0;151;28
+30;Diadema;2020-04-25;19;170;29
+31;Diadema;2020-04-26;8;178;30
+32;Diadema;2020-04-27;10;188;31
+33;Diadema;2020-04-28;51;239;32
+34;Diadema;2020-04-29;33;272;33
+35;Diadema;2020-04-30;18;290;34
+36;Diadema;2020-05-01;26;316;35
+37;Diadema;2020-05-02;4;320;36
+38;Diadema;2020-05-03;11;331;37
+39;Diadema;2020-05-04;7;338;38
+40;Diadema;2020-05-05;22;360;39
+41;Diadema;2020-05-06;45;405;40
+42;Diadema;2020-05-07;11;416;41
+43;Diadema;2020-05-08;7;423;42
+44;Diadema;2020-05-09;18;441;43
+45;Diadema;2020-05-10;8;449;44
+46;Diadema;2020-05-11;0;449;45
+47;Diadema;2020-05-12;7;456;46
+48;Diadema;2020-05-13;67;523;47
+49;Diadema;2020-05-14;44;567;48
+50;Diadema;2020-05-15;37;604;49
+51;Diadema;2020-05-16;30;634;50
+52;Diadema;2020-05-17;3;637;51
+53;Diadema;2020-05-18;7;644;52
+54;Diadema;2020-05-19;20;664;53
+55;Diadema;2020-05-20;69;733;54
+56;Diadema;2020-05-21;53;786;55
+57;Diadema;2020-05-22;20;806;56
+58;Mauá;2020-03-16;1;1;0
+59;Mauá;2020-03-17;0;1;1
+60;Mauá;2020-03-18;0;1;2
+61;Mauá;2020-03-19;0;1;3
+62;Mauá;2020-03-20;0;1;4
+63;Mauá;2020-03-21;0;1;5
+64;Mauá;2020-03-22;0;1;6
+65;Mauá;2020-03-23;0;1;7
+66;Mauá;2020-03-24;0;1;8
+67;Mauá;2020-03-25;1;2;9
+68;Mauá;2020-03-26;0;2;10
+69;Mauá;2020-03-27;0;2;11
+70;Mauá;2020-03-28;0;2;12
+71;Mauá;2020-03-29;0;2;13
+72;Mauá;2020-03-30;0;2;14
+73;Mauá;2020-03-31;1;3;15
+74;Mauá;2020-04-01;0;3;16
+75;Mauá;2020-04-02;4;7;17
+76;Mauá;2020-04-03;3;10;18
+77;Mauá;2020-04-04;5;15;19
+78;Mauá;2020-04-05;1;16;20
+79;Mauá;2020-04-06;2;18;21
+80;Mauá;2020-04-07;10;28;22
+81;Mauá;2020-04-08;4;32;23
+82;Mauá;2020-04-09;6;38;24
+83;Mauá;2020-04-10;4;42;25
+84;Mauá;2020-04-11;1;43;26
+85;Mauá;2020-04-12;2;45;27
+86;Mauá;2020-04-13;5;50;28
+87;Mauá;2020-04-14;2;52;29
+88;Mauá;2020-04-15;14;66;30
+89;Mauá;2020-04-16;5;71;31
+90;Mauá;2020-04-17;6;77;32
+91;Mauá;2020-04-18;5;82;33
+92;Mauá;2020-04-19;5;87;34
+93;Mauá;2020-04-20;6;93;35
+94;Mauá;2020-04-21;3;96;36
+95;Mauá;2020-04-22;13;109;37
+96;Mauá;2020-04-23;6;115;38
+97;Mauá;2020-04-24;4;119;39
+98;Mauá;2020-04-25;19;138;40
+99;Mauá;2020-04-26;3;141;41
+100;Mauá;2020-04-27;17;158;42
+101;Mauá;2020-04-28;21;179;43
+102;Mauá;2020-04-29;22;201;44
+103;Mauá;2020-04-30;22;223;45
+104;Mauá;2020-05-01;18;241;46
+105;Mauá;2020-05-02;7;248;47
+106;Mauá;2020-05-03;0;248;48
+107;Mauá;2020-05-04;6;254;49
+108;Mauá;2020-05-05;10;264;50
+109;Mauá;2020-05-06;16;280;51
+110;Mauá;2020-05-07;38;318;52
+111;Mauá;2020-05-08;12;330;53
+112;Mauá;2020-05-09;34;364;54
+113;Mauá;2020-05-10;14;378;55
+114;Mauá;2020-05-11;2;380;56
+115;Mauá;2020-05-12;8;388;57
+116;Mauá;2020-05-13;32;420;58
+117;Mauá;2020-05-14;40;460;59
+118;Mauá;2020-05-15;79;539;60
+119;Mauá;2020-05-16;27;566;61
+120;Mauá;2020-05-17;11;577;62
+121;Mauá;2020-05-18;10;587;63
+122;Mauá;2020-05-19;21;608;64
+123;Mauá;2020-05-20;35;643;65
+124;Mauá;2020-05-21;25;668;66
+125;Mauá;2020-05-22;54;722;67
+126;Ribeirão Pires;2020-03-25;1;1;0
+127;Ribeirão Pires;2020-03-26;0;1;1
+128;Ribeirão Pires;2020-03-27;0;1;2
+129;Ribeirão Pires;2020-03-28;0;1;3
+130;Ribeirão Pires;2020-03-29;0;1;4
+131;Ribeirão Pires;2020-03-30;0;1;5
+132;Ribeirão Pires;2020-03-31;0;1;6
+133;Ribeirão Pires;2020-04-01;0;1;7
+134;Ribeirão Pires;2020-04-02;1;2;8
+135;Ribeirão Pires;2020-04-03;2;4;9
+136;Ribeirão Pires;2020-04-04;0;4;10
+137;Ribeirão Pires;2020-04-05;0;4;11
+138;Ribeirão Pires;2020-04-06;0;4;12
+139;Ribeirão Pires;2020-04-07;5;9;13
+140;Ribeirão Pires;2020-04-08;3;12;14
+141;Ribeirão Pires;2020-04-09;3;15;15
+142;Ribeirão Pires;2020-04-10;0;15;16
+143;Ribeirão Pires;2020-04-11;1;16;17
+144;Ribeirão Pires;2020-04-12;0;16;18
+145;Ribeirão Pires;2020-04-13;1;17;19
+146;Ribeirão Pires;2020-04-14;0;17;20
+147;Ribeirão Pires;2020-04-15;6;23;21
+148;Ribeirão Pires;2020-04-16;3;26;22
+149;Ribeirão Pires;2020-04-17;2;28;23
+150;Ribeirão Pires;2020-04-18;3;31;24
+151;Ribeirão Pires;2020-04-19;2;33;25
+152;Ribeirão Pires;2020-04-20;0;33;26
+153;Ribeirão Pires;2020-04-21;2;35;27
+154;Ribeirão Pires;2020-04-22;0;35;28
+155;Ribeirão Pires;2020-04-23;0;35;29
+156;Ribeirão Pires;2020-04-24;3;38;30
+157;Ribeirão Pires;2020-04-25;6;44;31
+158;Ribeirão Pires;2020-04-26;2;46;32
+159;Ribeirão Pires;2020-04-27;3;49;33
+160;Ribeirão Pires;2020-04-28;9;58;34
+161;Ribeirão Pires;2020-04-29;2;60;35
+162;Ribeirão Pires;2020-04-30;3;63;36
+163;Ribeirão Pires;2020-05-01;9;72;37
+164;Ribeirão Pires;2020-05-02;2;74;38
+165;Ribeirão Pires;2020-05-03;0;74;39
+166;Ribeirão Pires;2020-05-04;0;74;40
+167;Ribeirão Pires;2020-05-05;4;78;41
+168;Ribeirão Pires;2020-05-06;2;80;42
+169;Ribeirão Pires;2020-05-07;3;83;43
+170;Ribeirão Pires;2020-05-08;4;87;44
+171;Ribeirão Pires;2020-05-09;6;93;45
+172;Ribeirão Pires;2020-05-10;0;93;46
+173;Ribeirão Pires;2020-05-11;0;93;47
+174;Ribeirão Pires;2020-05-12;0;93;48
+175;Ribeirão Pires;2020-05-13;6;99;49
+176;Ribeirão Pires;2020-05-14;13;112;50
+177;Ribeirão Pires;2020-05-15;8;120;51
+178;Ribeirão Pires;2020-05-16;5;125;52
+179;Ribeirão Pires;2020-05-17;1;126;53
+180;Ribeirão Pires;2020-05-18;1;127;54
+181;Ribeirão Pires;2020-05-19;7;134;55
+182;Ribeirão Pires;2020-05-20;8;142;56
+183;Ribeirão Pires;2020-05-21;7;149;57
+184;Ribeirão Pires;2020-05-22;3;152;58
+185;Rio Grande da Serra;2020-04-07;1;1;0
+186;Rio Grande da Serra;2020-04-08;3;4;1
+187;Rio Grande da Serra;2020-04-09;0;4;2
+188;Rio Grande da Serra;2020-04-10;0;4;3
+189;Rio Grande da Serra;2020-04-11;1;5;4
+190;Rio Grande da Serra;2020-04-12;0;5;5
+191;Rio Grande da Serra;2020-04-13;0;5;6
+192;Rio Grande da Serra;2020-04-14;0;5;7
+193;Rio Grande da Serra;2020-04-15;2;7;8
+194;Rio Grande da Serra;2020-04-16;0;7;9
+195;Rio Grande da Serra;2020-04-17;0;7;10
+196;Rio Grande da Serra;2020-04-18;2;9;11
+197;Rio Grande da Serra;2020-04-19;0;9;12
+198;Rio Grande da Serra;2020-04-20;0;9;13
+199;Rio Grande da Serra;2020-04-21;0;9;14
+200;Rio Grande da Serra;2020-04-22;0;9;15
+201;Rio Grande da Serra;2020-04-23;0;9;16
+202;Rio Grande da Serra;2020-04-24;2;11;17
+203;Rio Grande da Serra;2020-04-25;1;12;18
+204;Rio Grande da Serra;2020-04-26;1;13;19
+205;Rio Grande da Serra;2020-04-27;5;18;20
+206;Rio Grande da Serra;2020-04-28;1;19;21
+207;Rio Grande da Serra;2020-04-29;3;22;22
+208;Rio Grande da Serra;2020-04-30;2;24;23
+209;Rio Grande da Serra;2020-05-01;-1;23;24
+210;Rio Grande da Serra;2020-05-02;0;23;25
+211;Rio Grande da Serra;2020-05-03;0;23;26
+212;Rio Grande da Serra;2020-05-04;0;23;27
+213;Rio Grande da Serra;2020-05-05;0;23;28
+214;Rio Grande da Serra;2020-05-06;2;25;29
+215;Rio Grande da Serra;2020-05-07;0;25;30
+216;Rio Grande da Serra;2020-05-08;0;25;31
+217;Rio Grande da Serra;2020-05-09;1;26;32
+218;Rio Grande da Serra;2020-05-10;1;27;33
+219;Rio Grande da Serra;2020-05-11;0;27;34
+220;Rio Grande da Serra;2020-05-12;3;30;35
+221;Rio Grande da Serra;2020-05-13;3;33;36
+222;Rio Grande da Serra;2020-05-14;1;34;37
+223;Rio Grande da Serra;2020-05-15;2;36;38
+224;Rio Grande da Serra;2020-05-16;1;37;39
+225;Rio Grande da Serra;2020-05-17;3;40;40
+226;Rio Grande da Serra;2020-05-18;2;42;41
+227;Rio Grande da Serra;2020-05-19;1;43;42
+228;Rio Grande da Serra;2020-05-20;5;48;43
+229;Rio Grande da Serra;2020-05-21;5;53;44
+230;Rio Grande da Serra;2020-05-22;1;54;45
+231;Santo André;2020-03-16;1;1;0
+232;Santo André;2020-03-17;0;1;1
+233;Santo André;2020-03-18;5;6;2
+234;Santo André;2020-03-19;-4;2;3
+235;Santo André;2020-03-20;1;3;4
+236;Santo André;2020-03-21;0;3;5
+237;Santo André;2020-03-22;0;3;6
+238;Santo André;2020-03-23;0;3;7
+239;Santo André;2020-03-24;0;3;8
+240;Santo André;2020-03-25;14;17;9
+241;Santo André;2020-03-26;-1;16;10
+242;Santo André;2020-03-27;1;17;11
+243;Santo André;2020-03-28;0;17;12
+244;Santo André;2020-03-29;0;17;13
+245;Santo André;2020-03-30;23;40;14
+246;Santo André;2020-03-31;8;48;15
+247;Santo André;2020-04-01;3;51;16
+248;Santo André;2020-04-02;8;59;17
+249;Santo André;2020-04-03;11;70;18
+250;Santo André;2020-04-04;6;76;19
+251;Santo André;2020-04-05;-4;72;20
+252;Santo André;2020-04-06;2;74;21
+253;Santo André;2020-04-07;24;98;22
+254;Santo André;2020-04-08;15;113;23
+255;Santo André;2020-04-09;17;130;24
+256;Santo André;2020-04-10;9;139;25
+257;Santo André;2020-04-11;3;142;26
+258;Santo André;2020-04-12;5;147;27
+259;Santo André;2020-04-13;3;150;28
+260;Santo André;2020-04-14;10;160;29
+261;Santo André;2020-04-15;26;186;30
+262;Santo André;2020-04-16;19;205;31
+263;Santo André;2020-04-17;17;222;32
+264;Santo André;2020-04-18;14;236;33
+265;Santo André;2020-04-19;11;247;34
+266;Santo André;2020-04-20;10;257;35
+267;Santo André;2020-04-21;13;270;36
+268;Santo André;2020-04-22;5;275;37
+269;Santo André;2020-04-23;11;286;38
+270;Santo André;2020-04-24;10;296;39
+271;Santo André;2020-04-25;43;339;40
+272;Santo André;2020-04-26;5;344;41
+273;Santo André;2020-04-27;34;378;42
+274;Santo André;2020-04-28;42;420;43
+275;Santo André;2020-04-29;48;468;44
+276;Santo André;2020-04-30;51;519;45
+277;Santo André;2020-05-01;46;565;46
+278;Santo André;2020-05-02;13;578;47
+279;Santo André;2020-05-03;2;580;48
+280;Santo André;2020-05-04;6;586;49
+281;Santo André;2020-05-05;38;624;50
+282;Santo André;2020-05-06;135;759;51
+283;Santo André;2020-05-07;44;803;52
+284;Santo André;2020-05-08;33;836;53
+285;Santo André;2020-05-09;48;884;54
+286;Santo André;2020-05-10;41;925;55
+287;Santo André;2020-05-11;4;929;56
+288;Santo André;2020-05-12;35;964;57
+289;Santo André;2020-05-13;84;1048;58
+290;Santo André;2020-05-14;104;1152;59
+291;Santo André;2020-05-15;72;1224;60
+292;Santo André;2020-05-16;62;1286;61
+293;Santo André;2020-05-17;10;1296;62
+294;Santo André;2020-05-18;14;1310;63
+295;Santo André;2020-05-19;59;1369;64
+296;Santo André;2020-05-20;144;1513;65
+297;Santo André;2020-05-21;121;1634;66
+298;Santo André;2020-05-22;84;1718;67
+299;São Bernardo do Campo;2020-03-16;1;1;0
+300;São Bernardo do Campo;2020-03-17;0;1;1
+301;São Bernardo do Campo;2020-03-18;2;3;2
+302;São Bernardo do Campo;2020-03-19;0;3;3
+303;São Bernardo do Campo;2020-03-20;1;4;4
+304;São Bernardo do Campo;2020-03-21;0;4;5
+305;São Bernardo do Campo;2020-03-22;0;4;6
+306;São Bernardo do Campo;2020-03-23;0;4;7
+307;São Bernardo do Campo;2020-03-24;0;4;8
+308;São Bernardo do Campo;2020-03-25;9;13;9
+309;São Bernardo do Campo;2020-03-26;0;13;10
+310;São Bernardo do Campo;2020-03-27;2;15;11
+311;São Bernardo do Campo;2020-03-28;0;15;12
+312;São Bernardo do Campo;2020-03-29;0;15;13
+313;São Bernardo do Campo;2020-03-30;18;33;14
+314;São Bernardo do Campo;2020-03-31;11;44;15
+315;São Bernardo do Campo;2020-04-01;8;52;16
+316;São Bernardo do Campo;2020-04-02;7;59;17
+317;São Bernardo do Campo;2020-04-03;11;70;18
+318;São Bernardo do Campo;2020-04-04;7;77;19
+319;São Bernardo do Campo;2020-04-05;4;81;20
+320;São Bernardo do Campo;2020-04-06;8;89;21
+321;São Bernardo do Campo;2020-04-07;40;129;22
+322;São Bernardo do Campo;2020-04-08;18;147;23
+323;São Bernardo do Campo;2020-04-09;17;164;24
+324;São Bernardo do Campo;2020-04-10;10;174;25
+325;São Bernardo do Campo;2020-04-11;-2;172;26
+326;São Bernardo do Campo;2020-04-12;7;179;27
+327;São Bernardo do Campo;2020-04-13;6;185;28
+328;São Bernardo do Campo;2020-04-14;16;201;29
+329;São Bernardo do Campo;2020-04-15;30;231;30
+330;São Bernardo do Campo;2020-04-16;24;255;31
+331;São Bernardo do Campo;2020-04-17;26;281;32
+332;São Bernardo do Campo;2020-04-18;13;294;33
+333;São Bernardo do Campo;2020-04-19;3;297;34
+334;São Bernardo do Campo;2020-04-20;1;298;35
+335;São Bernardo do Campo;2020-04-21;12;310;36
+336;São Bernardo do Campo;2020-04-22;29;339;37
+337;São Bernardo do Campo;2020-04-23;19;358;38
+338;São Bernardo do Campo;2020-04-24;63;421;39
+339;São Bernardo do Campo;2020-04-25;42;463;40
+340;São Bernardo do Campo;2020-04-26;12;475;41
+341;São Bernardo do Campo;2020-04-27;36;511;42
+342;São Bernardo do Campo;2020-04-28;55;566;43
+343;São Bernardo do Campo;2020-04-29;50;616;44
+344;São Bernardo do Campo;2020-04-30;66;682;45
+345;São Bernardo do Campo;2020-05-01;23;705;46
+346;São Bernardo do Campo;2020-05-02;15;720;47
+347;São Bernardo do Campo;2020-05-03;11;731;48
+348;São Bernardo do Campo;2020-05-04;12;743;49
+349;São Bernardo do Campo;2020-05-05;82;825;50
+350;São Bernardo do Campo;2020-05-06;80;905;51
+351;São Bernardo do Campo;2020-05-07;39;944;52
+352;São Bernardo do Campo;2020-05-08;73;1017;53
+353;São Bernardo do Campo;2020-05-09;63;1080;54
+354;São Bernardo do Campo;2020-05-10;15;1095;55
+355;São Bernardo do Campo;2020-05-11;4;1099;56
+356;São Bernardo do Campo;2020-05-12;23;1122;57
+357;São Bernardo do Campo;2020-05-13;88;1210;58
+358;São Bernardo do Campo;2020-05-14;111;1321;59
+359;São Bernardo do Campo;2020-05-15;63;1384;60
+360;São Bernardo do Campo;2020-05-16;40;1424;61
+361;São Bernardo do Campo;2020-05-17;22;1446;62
+362;São Bernardo do Campo;2020-05-18;23;1469;63
+363;São Bernardo do Campo;2020-05-19;80;1549;64
+364;São Bernardo do Campo;2020-05-20;125;1674;65
+365;São Bernardo do Campo;2020-05-21;128;1802;66
+366;São Bernardo do Campo;2020-05-22;63;1865;67
+367;São Caetano do Sul;2020-03-16;1;1;0
+368;São Caetano do Sul;2020-03-17;0;1;1
+369;São Caetano do Sul;2020-03-18;5;6;2
+370;São Caetano do Sul;2020-03-19;-5;1;3
+371;São Caetano do Sul;2020-03-20;3;4;4
+372;São Caetano do Sul;2020-03-21;0;4;5
+373;São Caetano do Sul;2020-03-22;0;4;6
+374;São Caetano do Sul;2020-03-23;0;4;7
+375;São Caetano do Sul;2020-03-24;0;4;8
+376;São Caetano do Sul;2020-03-25;12;16;9
+377;São Caetano do Sul;2020-03-26;1;17;10
+378;São Caetano do Sul;2020-03-27;-1;16;11
+379;São Caetano do Sul;2020-03-28;0;16;12
+380;São Caetano do Sul;2020-03-29;0;16;13
+381;São Caetano do Sul;2020-03-30;11;27;14
+382;São Caetano do Sul;2020-03-31;3;30;15
+383;São Caetano do Sul;2020-04-01;2;32;16
+384;São Caetano do Sul;2020-04-02;1;33;17
+385;São Caetano do Sul;2020-04-03;3;36;18
+386;São Caetano do Sul;2020-04-04;2;38;19
+387;São Caetano do Sul;2020-04-05;0;38;20
+388;São Caetano do Sul;2020-04-06;1;39;21
+389;São Caetano do Sul;2020-04-07;11;50;22
+390;São Caetano do Sul;2020-04-08;7;57;23
+391;São Caetano do Sul;2020-04-09;2;59;24
+392;São Caetano do Sul;2020-04-10;3;62;25
+393;São Caetano do Sul;2020-04-11;-1;61;26
+394;São Caetano do Sul;2020-04-12;6;67;27
+395;São Caetano do Sul;2020-04-13;6;73;28
+396;São Caetano do Sul;2020-04-14;4;77;29
+397;São Caetano do Sul;2020-04-15;8;85;30
+398;São Caetano do Sul;2020-04-16;5;90;31
+399;São Caetano do Sul;2020-04-17;4;94;32
+400;São Caetano do Sul;2020-04-18;4;98;33
+401;São Caetano do Sul;2020-04-19;0;98;34
+402;São Caetano do Sul;2020-04-20;5;103;35
+403;São Caetano do Sul;2020-04-21;7;110;36
+404;São Caetano do Sul;2020-04-22;2;112;37
+405;São Caetano do Sul;2020-04-23;2;114;38
+406;São Caetano do Sul;2020-04-24;13;127;39
+407;São Caetano do Sul;2020-04-25;4;131;40
+408;São Caetano do Sul;2020-04-26;5;136;41
+409;São Caetano do Sul;2020-04-27;2;138;42
+410;São Caetano do Sul;2020-04-28;14;152;43
+411;São Caetano do Sul;2020-04-29;22;174;44
+412;São Caetano do Sul;2020-04-30;11;185;45
+413;São Caetano do Sul;2020-05-01;42;227;46
+414;São Caetano do Sul;2020-05-02;7;234;47
+415;São Caetano do Sul;2020-05-03;2;236;48
+416;São Caetano do Sul;2020-05-04;3;239;49
+417;São Caetano do Sul;2020-05-05;9;248;50
+418;São Caetano do Sul;2020-05-06;9;257;51
+419;São Caetano do Sul;2020-05-07;7;264;52
+420;São Caetano do Sul;2020-05-08;11;275;53
+421;São Caetano do Sul;2020-05-09;9;284;54
+422;São Caetano do Sul;2020-05-10;0;284;55
+423;São Caetano do Sul;2020-05-11;3;287;56
+424;São Caetano do Sul;2020-05-12;-26;261;57
+425;São Caetano do Sul;2020-05-13;5;266;58
+426;São Caetano do Sul;2020-05-14;13;279;59
+427;São Caetano do Sul;2020-05-15;11;290;60
+428;São Caetano do Sul;2020-05-16;7;297;61
+429;São Caetano do Sul;2020-05-17;2;299;62
+430;São Caetano do Sul;2020-05-18;5;304;63
+431;São Caetano do Sul;2020-05-19;25;329;64
+432;São Caetano do Sul;2020-05-20;33;362;65
+433;São Caetano do Sul;2020-05-21;13;375;66
+434;São Caetano do Sul;2020-05-22;22;397;67

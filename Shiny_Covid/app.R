@@ -22,16 +22,27 @@ glimpse(df_covid_shiny)
 
 # Shiny App ---------------------------------------------------------------
 
-
-
 ui <- fluidPage(
   titlePanel(tags$strong("Evolução do COVID nas 7 Cidades do ABC")),
   tags$hr(),
   fluidRow(
-    sidebarPanel()
+    column(width = 4, offset = 0, 
+           dateRangeInput(inputId = "date_range",
+                          label = "Selecione o intervalo de datas",
+                          format = "dd/mm/yyyy",
+                          separator = "-",
+                          min = min(df_covid_shiny$date),
+                          max = max(df_covid_shiny$date),
+                          start = min(df_covid_shiny$date),
+                          end = max(df_covid_shiny$date)
+           )
+    )
   ),
   fluidRow(
-    plotOutput("covid_linear")  
+    column(
+      width = 12,plotOutput("covid_linear")    
+    )
+    
   )
 )
 
@@ -52,6 +63,8 @@ server <- function(input, output) {
     
     # Criando o gráfico dos casos em função das datas
     plot_shiny <- df_covid_shiny %>%
+      filter(date >= paste(input$date_range[1]),
+             date <= paste(input$date_range[2])) %>% 
       ggplot(data = .,
              mapping = aes(x = date,
                            y = cum_sum_daily_cases,

@@ -39,6 +39,21 @@ ui <- fluidPage(
     )
   ),
   fluidRow(
+    column(width = 4, offset = 1,
+           checkboxGroupInput(inputId = "cities_abc",
+                              label = "Selecione a(s) Cidade(s)",
+                              choices = c("São Caetano do Sul",
+                                          "Santo André",
+                                          "Mauá",
+                                          "Diadema",
+                                          "São Bernardo do Campo",
+                                          "Rio Grande da Serra",
+                                          "Ribeirão Pires")
+           )
+    )
+  ),
+  tags$hr(),
+  fluidRow(
     column(
       width = 12,plotOutput("covid_linear")    
     )
@@ -64,7 +79,8 @@ server <- function(input, output) {
     # Criando o gráfico dos casos em função das datas
     plot_shiny <- df_covid_shiny %>%
       filter(date >= paste(input$date_range[1]),
-             date <= paste(input$date_range[2])) %>% 
+             date <= paste(input$date_range[2]),
+             city %in% input$cities_abc) %>% 
       ggplot(data = .,
              mapping = aes(x = date,
                            y = cum_sum_daily_cases,

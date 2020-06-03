@@ -25,40 +25,36 @@ glimpse(df_covid_shiny)
 ui <- fluidPage(
   titlePanel(tags$strong("Evolução do COVID nas 7 Cidades do ABC")),
   tags$hr(),
-  fluidRow(
-    column(width = 4, offset = 0, 
-           dateRangeInput(inputId = "date_range",
-                          label = "Selecione o intervalo de datas",
-                          format = "dd/mm/yyyy",
-                          separator = "-",
-                          min = min(df_covid_shiny$date),
-                          max = max(df_covid_shiny$date),
-                          start = min(df_covid_shiny$date),
-                          end = max(df_covid_shiny$date)
-           )
-    )
-  ),
-  fluidRow(
-    column(width = 4, offset = 1,
-           checkboxGroupInput(inputId = "cities_abc",
-                              label = "Selecione a(s) Cidade(s)",
-                              choices = c("São Caetano do Sul",
-                                          "Santo André",
-                                          "Mauá",
-                                          "Diadema",
-                                          "São Bernardo do Campo",
-                                          "Rio Grande da Serra",
-                                          "Ribeirão Pires")
-           )
-    )
-  ),
-  tags$hr(),
-  fluidRow(
-    column(
-      width = 12,plotOutput("covid_linear")    
-    )
+  
+  sidebarLayout(
+    sidebarPanel(
+      dateRangeInput(inputId = "date_range",
+                     label = "Selecione o intervalo de datas",
+                     format = "dd/mm/yyyy",
+                     separator = "-",
+                     min = min(df_covid_shiny$date),
+                     max = max(df_covid_shiny$date),
+                     start = min(df_covid_shiny$date),
+                     end = max(df_covid_shiny$date)
+      ),
+      
+      checkboxGroupInput(inputId = "cities_abc",
+                         label = "Selecione a(s) Cidade(s)",
+                         choices = c("São Caetano do Sul",
+                                     "Santo André",
+                                     "Mauá",
+                                     "Diadema",
+                                     "São Bernardo do Campo",
+                                     "Rio Grande da Serra",
+                                     "Ribeirão Pires"),
+                         selected = "São Caetano do Sul"
+      )
+    ),
     
-  )
+    mainPanel(plotOutput("covid_linear")   )
+  ),
+  
+  tags$hr(),
 )
 
 server <- function(input, output) {

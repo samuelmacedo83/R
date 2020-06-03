@@ -23,7 +23,8 @@ glimpse(df_covid_shiny)
 # Shiny App ---------------------------------------------------------------
 
 ui <- fluidPage(
-  titlePanel(tags$strong("Evolução do COVID nas 7 Cidades do ABC")),
+  titlePanel(tags$strong("Evolução do COVID nas 7 Cidades do ABC")), #end of titlePane
+  
   tags$hr(),
   
   sidebarLayout(
@@ -36,7 +37,7 @@ ui <- fluidPage(
                      max = max(df_covid_shiny$date),
                      start = min(df_covid_shiny$date),
                      end = max(df_covid_shiny$date)
-      ),
+      ), #end of dateRangeInput
       
       checkboxGroupInput(inputId = "cities_abc",
                          label = "Selecione a(s) Cidade(s)",
@@ -48,14 +49,14 @@ ui <- fluidPage(
                                      "Rio Grande da Serra",
                                      "Ribeirão Pires"),
                          selected = "São Caetano do Sul"
-      )
-    ),
+      ) #end of checkboxGroupInput
+    ), #end of sidebarPanel
     
-    mainPanel(plotOutput("covid_linear")   )
-  ),
+    mainPanel(plotOutput("covid_linear")) #end of mainPanel
+  ), #end of sidebarLayout
   
   tags$hr(),
-)
+) #end of fluidPage
 
 server <- function(input, output) {
   

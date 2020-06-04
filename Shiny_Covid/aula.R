@@ -1,16 +1,23 @@
 # Libraries ---------------------------------------------------------------
 if(!require(pacman)) {install.packages("pacman")}
-pacman::p_load("pacman", "tidyverse", "rstudioapi", "janitor", "directlabels")
+pacman::p_load("pacman", "tidyverse", "rstudioapi", "janitor", "directlabels", "httr")
 
 # Definir diretório de trabalho -------------------------------------------
 dirname(rstudioapi::getActiveDocumentContext()$path) %>% setwd()
 
 # Importar o data set -----------------------------------------------------
-df_covid <- read.csv(file = "./input/caso_full.csv", sep = ",", dec = ",",
+
+# Importando o data set do site do Brasil IO e gravando em disco
+httr::GET(url = "https://data.brasil.io/dataset/covid19/caso_full.csv.gz",
+          write_disk(path = "./input/caso_full.csv.gz", overwrite = TRUE),
+          progress()
+)
+
+# Lendo o arquivo importado do Brasil IO para um data frame
+df_covid <- read.csv(file = "./input/caso_full.csv.gz", sep = ",", dec = ",",
                      encoding = "UTF-8", stringsAsFactors = FALSE)
 
 glimpse(df_covid)
-
 
 # Tratamento das variáveis ------------------------------------------------
 df_covid$date <- as.Date(df_covid$date)

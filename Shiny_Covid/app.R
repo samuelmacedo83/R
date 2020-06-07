@@ -1,29 +1,62 @@
 # Libraries ---------------------------------------------------------------
 if(!require(pacman)) {install.packages("pacman")}
-pacman::p_load("pacman", "tidyverse", "rstudioapi", "shiny", "janitor", "directlabels")
+pacman::p_load("pacman", "tidyverse", "rstudioapi", "shiny", "janitor", "directlabels", "httr")
 
 
 # Setting working directory -----------------------------------------------
 dirname(rstudioapi::getActiveDocumentContext()$path) %>% setwd()
 
+# Importar o data set -----------------------------------------------------
 
-# Loading data ------------------------------------------------------------
-my_file <- dir(path = "./shiny_database/", pattern = ".csv", full.names = TRUE)
-df_covid_shiny <- read.delim(file = my_file,
-                             sep = ";",
-                             stringsAsFactors = FALSE,
-                             dec = ",",
-                             fileEncoding = "UTF-8")
+# Importando o data set do site do Brasil IO e gravando em disco
+httr::GET(url = "https://data.brasil.io/dataset/covid19/caso_full.csv.gz",
+          write_disk(path = "./input/caso_full.csv.gz", overwrite = TRUE),
+          progress()
+)
 
-df_covid_shiny$date <- as.Date(df_covid_shiny$date)
-glimpse(df_covid_shiny)
+# Lendo o arquivo importado do Brasil IO para um data frame
+df_covid <- read.csv(file = "./input/caso_full.csv.gz", sep = ",", dec = ",",
+                     encoding = "UTF-8", stringsAsFactors = FALSE)
+
+df_covid$date <- as.Date(df_covid$date)
+# Data wrangling ----------------------------------------------------------
+
+# Converting empty string in city variable to NA
+df_covid$city <- ifelse(test = df_covid$city == "", yes = NA, no = df_covid$city)
+
+# Removendo os NAs da cidades
+df_covid_clean <- df_covid %>% 
+  filter(!is.na(city))
 
 
+# Criando o filtro com as cidades de interesse
+cidades_filtro <- c("São Caetano do Sul",
+                    "Santo André",
+                    "Mauá",
+                    "Diadema",
+                    "São Bernardo do Campo",
+                    "Rio Grande da Serra",
+                    "Ribeirão Pires")
+
+# Criando o data frame com as 7 (sete) cidades do ABC
+df_covid_abc <- df_covid_clean %>% 
+  filter(city %in% cidades_filtro)
+
+# Criando o data frame com a frequÃªncia acumulada de novos casos desde o dia do primeiro caso
+df_covid_shiny <- df_covid_abc %>% 
+  group_by(city) %>%
+  summarise(city,
+            date,
+            new_confirmed,
+            new_deaths) %>% 
+  mutate(cum_sum_daily_cases = cumsum(new_confirmed),
+         cum_sum_daily_deaths = cumsum(new_deaths))
+cumsum(df_covid_abc$new)
 
 # Shiny App ---------------------------------------------------------------
 
 ui <- fluidPage(
-  titlePanel(tags$strong("EvoluÃ§Ã£o do COVID nas 7 Cidades do ABC")), #end of titlePane
+  titlePanel(tags$strong("Evolução do COVID nas 7 Cidades do ABC")), #end of titlePane
   
   tags$hr(),
   
@@ -41,14 +74,14 @@ ui <- fluidPage(
       
       checkboxGroupInput(inputId = "cities_abc",
                          label = "Selecione a(s) Cidade(s)",
-                         choices = c("SÃ£o Caetano do Sul",
-                                     "Santo AndrÃ©",
-                                     "MauÃ¡",
+                         choices = c("São Caetano do Sul",
+                                     "Santo André",
+                                     "Mauá",
                                      "Diadema",
-                                     "SÃ£o Bernardo do Campo",
+                                     "São Bernardo do Campo",
                                      "Rio Grande da Serra",
-                                     "RibeirÃ£o Pires"),
-                         selected = "SÃ£o Caetano do Sul"
+                                     "Ribeirão Pires"),
+                         selected = "São Caetano do Sul"
       ) #end of checkboxGroupInput
     ), #end of sidebarPanel
     

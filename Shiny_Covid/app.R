@@ -30,13 +30,13 @@ df_covid_clean <- df_covid %>%
 
 
 # Criando o filtro com as cidades de interesse
-cidades_filtro <- c("São Caetano do Sul",
-                    "Santo André",
-                    "Mauá",
+cidades_filtro <- c("SÃ£o Caetano do Sul",
+                    "Santo AndrÃ©",
+                    "MauÃ¡",
                     "Diadema",
-                    "São Bernardo do Campo",
+                    "SÃ£o Bernardo do Campo",
                     "Rio Grande da Serra",
-                    "Ribeirão Pires")
+                    "RibeirÃ£o Pires")
 
 # Criando o data frame com as 7 (sete) cidades do ABC
 df_covid_abc <- df_covid_clean %>% 
@@ -55,8 +55,10 @@ cumsum(df_covid_abc$new)
 
 # Shiny App ---------------------------------------------------------------
 
+
+# UI ----------------------------------------------------------------------
 ui <- fluidPage(
-  titlePanel(tags$strong("Evolução do COVID nas 7 Cidades do ABC")), #end of titlePane
+  titlePanel(tags$strong("EvoluÃ§Ã£o do COVID nas 7 Cidades do ABC")), #end of titlePane
   
   tags$hr(),
   
@@ -74,14 +76,14 @@ ui <- fluidPage(
       
       checkboxGroupInput(inputId = "cities_abc",
                          label = "Selecione a(s) Cidade(s)",
-                         choices = c("São Caetano do Sul",
-                                     "Santo André",
-                                     "Mauá",
+                         choices = c("SÃ£o Caetano do Sul",
+                                     "Santo AndrÃ©",
+                                     "MauÃ¡",
                                      "Diadema",
-                                     "São Bernardo do Campo",
+                                     "SÃ£o Bernardo do Campo",
                                      "Rio Grande da Serra",
-                                     "Ribeirão Pires"),
-                         selected = "São Caetano do Sul"
+                                     "RibeirÃ£o Pires"),
+                         selected = "SÃ£o Caetano do Sul"
       ) #end of checkboxGroupInput
     ), #end of sidebarPanel
     
@@ -91,6 +93,8 @@ ui <- fluidPage(
   tags$hr(),
 ) #end of fluidPage
 
+
+# Server ------------------------------------------------------------------
 server <- function(input, output) {
   
   output$covid_linear <- renderPlot({

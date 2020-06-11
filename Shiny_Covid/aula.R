@@ -1,16 +1,23 @@
 # Libraries ---------------------------------------------------------------
 if(!require(pacman)) {install.packages("pacman")}
-pacman::p_load("pacman", "tidyverse", "rstudioapi", "janitor", "directlabels")
+pacman::p_load("pacman", "tidyverse", "rstudioapi", "janitor", "directlabels", "httr")
 
 # Definir diretório de trabalho -------------------------------------------
 dirname(rstudioapi::getActiveDocumentContext()$path) %>% setwd()
 
 # Importar o data set -----------------------------------------------------
-df_covid <- read.csv(file = "./input/caso_full.csv", sep = ",", dec = ",",
+
+# Importando o data set do site do Brasil IO e gravando em disco
+httr::GET(url = "https://data.brasil.io/dataset/covid19/caso_full.csv.gz",
+          write_disk(path = "./input/caso_full.csv.gz", overwrite = TRUE),
+          progress()
+)
+
+# Lendo o arquivo importado do Brasil IO para um data frame
+df_covid <- read.csv(file = "./input/caso_full.csv.gz", sep = ",", dec = ",",
                      encoding = "UTF-8", stringsAsFactors = FALSE)
 
 glimpse(df_covid)
-
 
 # Tratamento das variáveis ------------------------------------------------
 df_covid$date <- as.Date(df_covid$date)
@@ -41,8 +48,10 @@ df_covid_abc <- df_covid_clean %>%
 # Criando o data frame com a frequência acumulada de novos casos desde o dia do primeiro caso
 df_covid_abc_first_case <- df_covid_abc %>% 
   group_by(city, date) %>% 
-  summarise(new_confirmed) %>% 
+  summarise(new_confirmed,
+            new_deaths) %>% 
   mutate(cum_sum_daily_cases = cumsum(new_confirmed),
+         cum_sum_daily_deaths = cumsum(new_deaths),
          days_since_first_case = date - min(date))
 
 glimpse(df_covid_abc_first_case)
@@ -99,29 +108,37 @@ plot_df_covid_abc_cases_daily <- df_covid_abc_first_case %>%
   ggplot(data = .,
          mapping = aes(x = date,
                        y = cum_sum_daily_cases,
-                       colour = city)) +
-  geom_line(size = 1) +
+                       colour = city)
+  ) +
+  geom_line(size = 1
+  ) +
   geom_vline(xintercept = as.Date("2020-03-25"),
              linetype = "dashed",
-             colour = "#2769db") +
-  scale_color_discrete(guide = "none") +
+             colour = "#2769db"
+  ) +
+  scale_color_discrete(guide = "none"
+  ) +
   scale_x_date(expand = expansion(add = c(1, 12)),
                limits = c(first_day, last_day),
                breaks = seq(from = first_day, to = last_day, by = 3),
-               date_labels = "%d-%B") +
+               date_labels = "%d-%B"
+  ) +
   directlabels::geom_dl(mapping = aes(label = city),
-                        method = list(dl.trans(x = x + 0.2), "last.points")) +
+                        method = list(dl.trans(x = x + 0.2), "last.points")
+  ) +
   annotate(geom = "text",
            x = x_quarentine_pos,
            y = y_quarentine_pos,
            colour = "#2769db",
            hjust = -0.01,
-           label = "Início da quarentena no Estado de São Paulo (25/03/2020)") +
+           label = "Início da quarentena no Estado de São Paulo (25/03/2020)"
+  ) +
   labs(
     x = "Data de novos casos",
     y = "Número de casos acumulados por dia (linear)",
     title = "Evolução do número de casos COVID acumulados por dia nas 7 cidades do ABC",
-    caption = "Dados públicos e abertos providos pelo Brasil.IO") +
+    caption = "Dados públicos e abertos providos pelo Brasil.IO"
+  ) +
   theme_bw() +
   theme(
     plot.title = element_text(size = 20, colour = main_color),
@@ -134,6 +151,36 @@ plot_df_covid_abc_cases_daily <- df_covid_abc_first_case %>%
   )
 
 plot_df_covid_abc_cases_daily
+
+
+# Gráfico do número de mortes acumuladas ao longo do tempo
+df_covid_abc_first_case %>% 
+  ggplot(data = .,
+         mapping = aes(x = date, y = cum_sum_daily_deaths, colour = city)
+  ) +
+  geom_line(size = 1) +
+  scale_x_date(expand = expansion(c(0.01, 0.2)),
+               breaks = seq(from = first_day, to = last_day, by = 3),
+               limits = c(first_day, last_day),
+               date_labels = "%d-%B"
+  ) +
+  scale_color_discrete(guide = "none") +
+  directlabels::geom_dl(mapping = aes(label = city),
+                        method = list(dl.trans(x = x + 0.2), "last.points")
+  ) +
+  labs(title = "Evolução do número de óbitos por COVID acumulados por dia nas 7 cidades do ABC",
+       x = "Data dos novos óbitos",
+       y = "Número de óbitos acumulados por dia (linear)",
+       caption = "Dados públicos e abertos providos pelo Brasil.IO"
+       
+  ) +
+  theme_bw() +
+  theme(
+    plot.title = element_text(size = 20, colour = main_color),
+    axis.title = element_text(size = 12, colour = main_color),
+    axis.text.y = element_text(colour = main_color),
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, colour = main_color)
+  )
 
 # Exportando o gráfico
 pdf(file = "./plot_output/plot_df_covid_abc_cases_daily.pdf",

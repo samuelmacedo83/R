@@ -17,4 +17,3 @@ df_test %>%
   fill(AGRUPAMENTO_1,
        AGRUPAMENTO_2) %>% 
   view()
-
